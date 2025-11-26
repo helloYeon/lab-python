@@ -18,8 +18,8 @@ def rotate_and_split_into_channels(
 
     Args:
         frame: 入力フレーム
-        IMAGE_WIDTH: 元の動画の幅（使用していない）
-        IMAGE_HEIGHT: 元の動画の高さ（使用していない）
+        IMAGE_WIDTH: 元の動画の幅
+        IMAGE_HEIGHT: 元の動画の高さ
 
     Returns:
         [ch1, ch2, ch3, ch4] のリスト
