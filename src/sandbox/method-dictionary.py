@@ -70,52 +70,58 @@ q = {
 # else:
 #     print(f"request_params is{p}")
 
+test = {}
 
-def print_dict(prefix: str, data=None) -> None:
-    """出力"""
-    print("\n{}: {}".format(prefix, data))
+if test:
+    print("AAAAAA----")
+else:
+    print("BBBB")
 
-
-print_dict("A get → ", q.get("log_level__"))
-
-print_dict("A_2 get → ", q["log_level"])
-
-print_dict(
-    "B pop → %s"
-    % ((lambda q: [cloned := q.copy(), cloned.pop("request_headers")])(q)[1])
-)
-
-print_dict("C copy → %s", q.copy())
-
-print_dict("D clear → %s" % ((lambda q: [cloned := q.copy(), cloned.clear()])(q)[1]))
-
-print_dict("E items  ", q.items())
-
-print_dict("F values ", q.values())
-
-print_dict("G update → %s" % ((lambda q: q.update({"NAME": "hoge"}) or q)(q)))
-
-print_dict("H setdefault → ", ((lambda q: [q.setdefault("NAME", "apple"), q])(q)[1]))
-
-print_dict("I popitem → ", ((lambda q: [q.popitem(), q])(q)[1]))
-
-print_dict("J keys →", q.keys())
-
-print_dict(
-    "J fromkeys →",
-    q.fromkeys([5, 10, 5, 10, 2, 1, 3, 4, 6], ["田中"]),
-)
-
-user_info = {}
-company_info = {}
-user_info["userId"] = 1
-user_info["lastName"] = 2
-user_info["firstName"] = 3
-user_info["esCompanyId"] = 4
-company_info["peppolId"] = 5
+# def print_dict(prefix: str, data=None) -> None:
+#     """出力"""
+#     print("\n{}: {}".format(prefix, data))
 
 
-# print_dict("K user_info →", **user_info)
+# print_dict("A get → ", q.get("log_level__"))
 
-test = {**user_info, **company_info, "test": "test"}
-print("AAA-", test)
+# print_dict("A_2 get → ", q["log_level"])
+
+# print_dict(
+#     "B pop → %s"
+#     % ((lambda q: [cloned := q.copy(), cloned.pop("request_headers")])(q)[1])
+# )
+
+# print_dict("C copy → %s", q.copy())
+
+# print_dict("D clear → %s" % ((lambda q: [cloned := q.copy(), cloned.clear()])(q)[1]))
+
+# print_dict("E items  ", q.items())
+
+# print_dict("F values ", q.values())
+
+# print_dict("G update → %s" % ((lambda q: q.update({"NAME": "hoge"}) or q)(q)))
+
+# print_dict("H setdefault → ", ((lambda q: [q.setdefault("NAME", "apple"), q])(q)[1]))
+
+# print_dict("I popitem → ", ((lambda q: [q.popitem(), q])(q)[1]))
+
+# print_dict("J keys →", q.keys())
+
+# print_dict(
+#     "J fromkeys →",
+#     q.fromkeys([5, 10, 5, 10, 2, 1, 3, 4, 6], ["田中"]),
+# )
+
+# user_info = {}
+# company_info = {}
+# user_info["userId"] = 1
+# user_info["lastName"] = 2
+# user_info["firstName"] = 3
+# user_info["esCompanyId"] = 4
+# company_info["peppolId"] = 5
+
+
+# # print_dict("K user_info →", **user_info)
+
+# test = {**user_info, **company_info, "test": "test"}
+# print("AAA-", test)
