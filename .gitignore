@@ -1,1 +1,4 @@
 .venv
+sample*.mp4
+outputs
+.DS_Store
